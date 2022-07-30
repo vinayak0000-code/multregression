@@ -25,7 +25,7 @@ def predict():
     prediction = model.predict([[exp]])
     
         
-    return render_template('index.html', prediction_text='Regression Model  has predicted salary for given experinace is : {}'.format(prediction))
+    return render_template('index2.html', prediction_text='Regression Model  has predicted salary for given experinace is : {}'.format(prediction))
 
 
 if __name__ == "__main__":
