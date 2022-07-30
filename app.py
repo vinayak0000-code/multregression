@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 
 
-app = Flask(_name_)
+app = Flask(__name__)
 model = pickle.load(open('linearregression.pkl','rb')) 
 
 
@@ -28,5 +28,5 @@ def predict():
     return render_template('index.html', prediction_text='Regression Model  has predicted salary for given experinace is : {}'.format(prediction))
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(debug=True)
